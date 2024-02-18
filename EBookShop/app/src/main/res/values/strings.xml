@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">E Book Shop</string>
+
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="web_client_id">536924135537-db7oe09juhqfk8m2jva0toufpc7be8iu.apps.googleusercontent.com</string>
+
+</resources>

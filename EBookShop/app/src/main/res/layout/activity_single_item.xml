@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SingleItemActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/singleItemImageSlider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        app:iss_auto_cycle="true"
+                        app:iss_delay="3000"
+                        app:iss_period="3000"
+                        app:iss_text_align="CENTER">
+
+                    </com.denzcoskun.imageslider.ImageSlider>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                    <ImageView
+                        android:id="@+id/itemImg1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_image_24" />
+
+                    <ImageView
+                        android:id="@+id/itemImg2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_image_24" />
+
+                    <ImageView
+                        android:id="@+id/itemImg3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_image_24" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/itemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/acme"
+                    android:text="Title"
+                    android:textSize="34sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <TextView
+                    android:id="@+id/itemDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/acme"
+                    android:text="Description"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/itemTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/itemTitle" />
+
+                <TextView
+                    android:id="@+id/itemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/acme"
+                    android:text="Rs.100.00"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/itemDesc"
+                    app:layout_constraintTop_toBottomOf="@+id/itemDesc" />
+
+                <TextView
+                    android:id="@+id/itemQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/acme"
+                    android:text="Quantity : 10"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/itemPrice"
+                    app:layout_constraintTop_toBottomOf="@+id/itemPrice" />
+
+                <Button
+                    android:id="@+id/buyNowBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Buy Now"
+                    app:layout_constraintEnd_toStartOf="@+id/addToCartBtn"
+                    app:layout_constraintStart_toStartOf="@+id/itemQty"
+                    app:layout_constraintTop_toBottomOf="@+id/itemQty" />
+
+                <ImageButton
+                    android:id="@+id/addToCartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_shopping_cart_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/buyNowBtn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/buyNowBtn" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/acme"
+                    android:text="Recomended Items"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/itemQty"
+                    app:layout_constraintTop_toBottomOf="@+id/buyNowBtn" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <ImageButton
+                    android:id="@+id/qtyMinusBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/itemQty"
+                    app:layout_constraintEnd_toStartOf="@+id/itemSelectQty"
+                    app:layout_constraintTop_toTopOf="@+id/itemPrice"
+                    app:layout_constraintVertical_bias="0.55"
+                    app:srcCompat="@drawable/baseline_remove_24" />
+
+                <ImageButton
+                    android:id="@+id/qtyAddBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/qtyMinusBtn"
+                    app:layout_constraintEnd_toEndOf="@+id/addToCartBtn"
+                    app:layout_constraintTop_toTopOf="@+id/qtyMinusBtn"
+                    app:srcCompat="@drawable/baseline_add_24" />
+
+                <EditText
+                    android:id="@+id/itemSelectQty"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:fontFamily="@font/acme"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/qtyAddBtn"
+                    app:layout_constraintEnd_toStartOf="@+id/qtyAddBtn"
+                    app:layout_constraintTop_toTopOf="@+id/qtyAddBtn"
+                    tools:text="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|start|center_horizontal"
+            app:srcCompat="@drawable/baseline_arrow_back_24"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="32dp" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:fontFamily="@font/acme"
+            android:text="Item"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="32dp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/loading_animation" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

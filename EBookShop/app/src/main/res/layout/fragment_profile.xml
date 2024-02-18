@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/acme"
+                android:text="Profile"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/acme"
+                android:text="Personal Details"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <EditText
+                android:id="@+id/profileUNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/custom_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/acme"
+                android:hint="User Name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/profileEmailText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_edit_text"
+                android:fontFamily="@font/acme"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Email"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/profileUNameEditText"
+                app:layout_constraintStart_toStartOf="@+id/profileUNameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/profileUNameEditText" />
+
+            <EditText
+                android:id="@+id/profileMobileText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_edit_text"
+                android:fontFamily="@font/acme"
+                android:hint="Mobile"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/profileEmailText"
+                app:layout_constraintStart_toStartOf="@+id/profileEmailText"
+                app:layout_constraintTop_toBottomOf="@+id/profileEmailText" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/acme"
+                android:text="Address Details"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView7"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/profileMobileText" />
+
+            <EditText
+                android:id="@+id/profileAddressLine1EditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/acme"
+                android:hint="Line 1"
+                android:inputType="text"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/profileMobileText"
+                app:layout_constraintStart_toStartOf="@+id/profileMobileText"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <EditText
+                android:id="@+id/profileAddressLine2EditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/acme"
+                android:hint="Line 2"
+                android:inputType="text"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/profileAddressLine1EditText"
+                app:layout_constraintStart_toStartOf="@+id/profileAddressLine1EditText"
+                app:layout_constraintTop_toBottomOf="@+id/profileAddressLine1EditText" />
+
+            <EditText
+                android:id="@+id/profileAddressCityEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/acme"
+                android:hint="City"
+                android:inputType="text"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/profileAddressLine2EditText"
+                app:layout_constraintStart_toStartOf="@+id/profileAddressLine2EditText"
+                app:layout_constraintTop_toBottomOf="@+id/profileAddressLine2EditText" />
+
+            <EditText
+                android:id="@+id/profileAddressPostalEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/acme"
+                android:hint="Postal Code"
+                android:inputType="number"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/profileAddressCityEditText"
+                app:layout_constraintStart_toStartOf="@+id/profileAddressCityEditText"
+                app:layout_constraintTop_toBottomOf="@+id/profileAddressCityEditText" />
+
+            <Button
+                android:id="@+id/updateProfileBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Update Profile"
+                app:layout_constraintEnd_toEndOf="@+id/profileAddressPostalEditText"
+                app:layout_constraintStart_toStartOf="@+id/profileAddressPostalEditText"
+                app:layout_constraintTop_toBottomOf="@+id/profileAddressPostalEditText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

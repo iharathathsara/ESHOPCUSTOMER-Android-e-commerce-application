@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/custom_login_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/custom_login_bg2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/custom_login_bg3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="cursive"
+                    android:text="REGISTER"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="48dp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    app:srcCompat="@drawable/icon" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/acme"
+                    android:text="User Name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+                <EditText
+                    android:id="@+id/userNameTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/custom_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/acme"
+                    android:hint="User Name"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:paddingStart="20dp"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/acme"
+                    android:text="User Email"
+                    app:layout_constraintStart_toStartOf="@+id/textView3"
+                    app:layout_constraintTop_toBottomOf="@+id/userNameTxt" />
+
+                <EditText
+                    android:id="@+id/userEmailTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/acme"
+                    android:hint="User Email"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:paddingStart="20dp"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/userNameTxt"
+                    app:layout_constraintStart_toStartOf="@+id/userNameTxt"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/acme"
+                    android:text="User Mobile"
+                    app:layout_constraintStart_toStartOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/userEmailTxt" />
+
+                <EditText
+                    android:id="@+id/userMobileTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/acme"
+                    android:hint="User Mobile"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:paddingStart="20dp"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/userEmailTxt"
+                    app:layout_constraintStart_toStartOf="@+id/userEmailTxt"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/acme"
+                    android:text="User Password"
+                    app:layout_constraintStart_toStartOf="@+id/textView5"
+                    app:layout_constraintTop_toBottomOf="@+id/userMobileTxt" />
+
+                <EditText
+                    android:id="@+id/userPasswordTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edit_text"
+                    android:ems="10"
+                    android:fontFamily="@font/acme"
+                    android:hint="User Password"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:paddingStart="20dp"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/userMobileTxt"
+                    app:layout_constraintStart_toStartOf="@+id/userMobileTxt"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <Button
+                    android:id="@+id/registerBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/blue"
+                    android:fontFamily="@font/acme"
+                    android:text="Register"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/userPasswordTxt"
+                    app:layout_constraintStart_toStartOf="@+id/userPasswordTxt"
+                    app:layout_constraintTop_toBottomOf="@+id/userPasswordTxt" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Or"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Register With"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <ImageView
+                    android:id="@+id/regGoogle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    app:srcCompat="@drawable/google" />
+
+                <TextView
+                    android:id="@+id/gotoLoginLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Already have an account. Go to Log In"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regGoogle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
